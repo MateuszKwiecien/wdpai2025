@@ -1,0 +1,107 @@
+nav {
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 120px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+aside, section {
+    padding: 1em;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 250px;
+    background-color: white;
+    border-radius: 1em;
+        box-shadow: rgb(0 0 0 / 34%) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+nav > ul {
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+    color: white;
+}
+
+nav > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav > ul > li:hover {
+    transform: scale(1.1);
+}
+
+nav > ul > li > i, nav > i {
+    font-size: 2.5em;
+}
+
+nav > ul + ul {
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+aside > ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+
+.mobile-icons {
+    display: none;
+}
+
+
+.hide-element {
+    display: none;
+}
+
+.show-element {
+    display: flex !important;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-icons {
+        display: flex;
+    }
+
+    .desktop-icons {
+        display: none;
+        position: fixed;
+        top: 120px;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        margin: 0;
+        width: 70%;
+    }
+}
